@@ -1,6 +1,6 @@
 # Solution to Project Euler Problem 1
 # Code by Tim Payne
-# Completed: 
+# Completed: 03/14/2019
 
 solution = 0
 

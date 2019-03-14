@@ -1,16 +1,24 @@
 # Solution to Project Euler Problem 1
 # Code by Tim Payne
-# Completed: 03/14/2019
+# Completed: 
 
-solution = 0
+def three_five_counter():
 
-for a in range(1000):
+        solution = 0
 
-	if a % 3 == 0 or a % 5 == 0:
+        for a in range(1000):
 
-		solution += a
+                if a % 3 == 0 or a % 5 == 0:
 
-print(solution)
+                        solution += a
+
+        print(solution)
+
+
+if __name__ == '__main__':
+        three_five_counter()
+
+
 
 
 

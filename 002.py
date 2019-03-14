@@ -16,7 +16,6 @@ while b <= 4_000_000:
 
         solution += b
 
-
 print(solution)
 
     

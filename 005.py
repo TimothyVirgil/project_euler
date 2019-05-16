@@ -1,4 +1,4 @@
-# Solution to Project Euler Problem 4
+# Solution to Project Euler Problem 5
 # Code by Timothy Virgil Payne Jr.
 # Completed: 05/15/19
 

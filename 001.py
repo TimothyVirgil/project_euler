@@ -1,6 +1,6 @@
 # Solution to Project Euler Problem 1
 # Code by Tim Payne
-# Completed: 
+# Completed: 03/13/2019
 
 def three_five_counter():
 

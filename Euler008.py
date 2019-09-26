@@ -1,7 +1,7 @@
 # Solution to Project Euler Problem 8
 # Code by Timothy Virgil Payne Jr.
 # Started: 09/26/19 4:03 PM
-# Completed: 
+# Completed: 09/26/19 4:49 PM
 
 #We need to find th 13 digit with the highest average
 #We can slice through the number as a string and store the running highest total

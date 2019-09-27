@@ -5,32 +5,54 @@
 
 # Need to make a quick prime checker - adjust range as needed
 
-from math import sqrt
+import sys
 
-prime_list = [2,3,5,7,11,13] #initial list of primes
+prime_list = [2] #add two so we can cycle through numbers faster later
 
 prime_count = len(prime_list)
 
-for a in range(17,1000000,2):
+def primecheck(a):
 
-	if prime_count == 10_001:
+	'This function checks to see if an integer is prime.'
 
-		print(f'The 10 001st prime number is {prime_list[-1]}.\n')
+	if a < 2:
 
-		wait = input("press a key to exit.")
+		return False
+
+	elif a == 2 or a == 3:
+
+		return True
 
 	else:
-
-		for b in range(3, int(sqrt(a))+1):
+		
+		for b in range(3, int(a**(0.5)) + 2, 2):
 
 			if a % b == 0:
 
-				break
+				return False
+		else:
+
+			return True
+
+if __name__ =='main':
+
+	for a in range(3,1000000,2):
+
+		if prime_count == 10_001:
+
+			print(f'The 10 001st prime number is {prime_list[-1]}.\n')
+
+			wait = input("press a key to exit.")
+
+			sys.exit()
 
 		else:
+
+			if primecheck(a):
+
 			
-			prime_list += [a]
-			prime_count += 1
+				prime_list += [a]
+				prime_count += 1
 
 
 

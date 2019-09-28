@@ -19,25 +19,29 @@ def prod(a): #product function
 
 	return(run_prod)
 
-
-from Euler008a import thousand_digit # import the number from a separate file to help w/ clutter
-
-for a in range(len(thousand_digit)-13):
-
-	thirteen_adjacent = list(thousand_digit[a:a+13]) #slice 13 numbers
-
-	thirteen_adjacent = list(map(int, thirteen_adjacent)) #list of integers
-
-	curr_product = prod(thirteen_adjacent) #multiply together
-
-	if curr_product > max_product:
-
-		max_product = curr_product
+if __name__ == '__main__':
 
 
-print(f'The maximum product is {max_product}')
+	from Euler008a import thousand_digit # import the number from a separate file to help w/ clutter
 
-wait = input('Press a button to exit')
+
+
+	for a in range(len(thousand_digit)-13):
+
+		thirteen_adjacent = list(thousand_digit[a:a+13]) #slice 13 numbers
+
+		thirteen_adjacent = list(map(int, thirteen_adjacent)) #list of integers
+
+		curr_product = prod(thirteen_adjacent) #multiply together
+
+		if curr_product > max_product:
+
+			max_product = curr_product
+
+
+	print(f'The maximum product is {max_product}')
+
+	wait = input('Press a button to exit')
 
 
 

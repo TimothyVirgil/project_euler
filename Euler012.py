@@ -9,8 +9,6 @@
 
 import sys
 
-high_fact = 0
-
 def fact_count(a):
 
 	curr_fact_count = 0

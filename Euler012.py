@@ -1,4 +1,4 @@
-# Solution to Project Euler Problem 11
+# Solution to Project Euler Problem 12
 # Code by Timothy Virgil Payne Jr.
 # Started: 10/01/19 7:15 PM
 # Completed: 10/01/19 7:30 PM

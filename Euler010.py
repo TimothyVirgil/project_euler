@@ -26,7 +26,7 @@ prime_sum = 5 #initialize prime sum. Start with 2 + 3 = 5 for speed purposes.
 
 for x in range(5, 2_000_000, 2):
 
-	elif over3_prime_check(x):
+        if over3_prime_check(x):
 
 		prime_sum += x
 

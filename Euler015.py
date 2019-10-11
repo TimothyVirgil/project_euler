@@ -20,5 +20,5 @@ print(f'The number of ways to move through the 20 x 20 grid is {ans}.')
 
 wait = input("Press enter to exit.")
 
-sys.exit()
+sys.exit
 

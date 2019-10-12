@@ -1,4 +1,4 @@
-# Solution to Project Euler Problem 16
+# Solution to Project Euler Problem 17
 # Code by Timothy Virgil Payne Jr.
 # Started: 10/07/19 7:45 PM
 # Completed: 10/10/19 4:49 PM

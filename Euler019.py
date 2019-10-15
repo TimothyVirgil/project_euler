@@ -10,13 +10,13 @@ are fast, it's plenty efficient for us!'''
 
 #Find how many Sundays were on the first of the month
 #from 1901-2000
-#
+
 
 import sys
 
 from datetime import date
 
-first_day = date(1901, 1, 1).toordinal() #Date as integer
+first_day = date(1901, 1, 1).toordinal() #first day as integer
 last_day = date(2000, 12, 31).toordinal() #last day as integer
 
 first_sun_count = 0

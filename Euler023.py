@@ -25,16 +25,23 @@ def abund_check(a):
 	else:
 		return False
 
-abund_list = [x for x in range(2,28124) if abund_check(x)]
+def not_abun_sum():
 
-abun_sum_set = set()
-non_sum_set = set()
-num_set = {x for x in range(28124)}
-
-for a in range(0,len(abund_list)):
-    for b in range(a,len(abund_list)):
-        abun_sum_set.add(abund_list[a] + abund_list[b])
-
-else:
-    non_sum_set = num_set - abun_sum_set
-    print(sum(non_sum_set))
+    abund_list = [x for x in range(2,28124) if abund_check(x)]
+    
+    abun_sum_set = set()
+    non_sum_set = set()
+    num_set = {x for x in range(28124)}
+    
+    for a in range(0,len(abund_list)):
+        for b in range(a,len(abund_list)):
+            abun_sum_set.add(abund_list[a] + abund_list[b])
+    
+    else:
+        non_sum_set = num_set - abun_sum_set
+        print(sum(non_sum_set))
+        
+if __name__ == '__main__':
+    
+    not_abun_sum()
+    

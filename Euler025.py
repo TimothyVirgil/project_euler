@@ -1,4 +1,4 @@
-'''Solution to Project Euler Problem 24
+'''Solution to Project Euler Problem 25
 Code by Timothy Virgil Payne Jr.
 Started: 5/6/2020
 Completed: 5/6/2020

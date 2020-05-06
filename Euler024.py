@@ -1,12 +1,11 @@
 '''Solution to Project Euler Problem 24
 Code by Timothy Virgil Payne Jr.
 Started: 5/4/2020
-Completed:
+Completed: 5/4/2020
 I'll use itertools to generate the lexicographic permutations and a counter to
 return the result when we're on the 1_000_000th permutation.
 '''
 from itertools import permutations
-
 def lexo_perm():
     
     count_perm = enumerate(permutations('0123456789'))
@@ -25,3 +24,4 @@ def lexo_perm():
 if __name__ == '__main__':
     
     lexo_perm()
+    

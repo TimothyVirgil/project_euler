@@ -6,7 +6,6 @@ I make a list of abundant numbers up to 28123.
 Then I make a set of the sums so there are no repeats.
 Then I subtract this set from the set of integers from 1 to 28123.
 Then I sum this.'''
-
 def abund_check(a):
 
 	curr_fact_count = 1

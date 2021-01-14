@@ -12,29 +12,34 @@ prime_list = [2] #add two so we can cycle through numbers faster later
 prime_count = len(prime_list)
 
 def primecheck(a):
+    
+    'This function checks to see if an integer is prime.' 
 
-	'This function checks to see if an integer is prime.'
+    if a == 2 or a == 3:
+        
+        return True
 
-	if a < 2:
+    elif a < 2 or a % 2 == 0:
+        
+        return False
 
-		return False
+    else:
+        
+        for b in range(3, int(a**(0.5)) + 2, 2):
+            
+            if a % b == 0:
+                
+                return False
+            
+            else:
+                
+                continue
+            
+        else:
+            
+            return True
 
-	elif a == 2 or a == 3:
-
-		return True
-
-	else:
-		
-		for b in range(3, int(a**(0.5)) + 2, 2):
-
-			if a % b == 0:
-
-				return False
-		else:
-
-			return True
-
-if __name__ =='main':
+if __name__ =='__main__':
 
 	for a in range(3,1000000,2):
 

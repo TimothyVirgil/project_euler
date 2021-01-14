@@ -9,8 +9,7 @@ def longest_cycle():
 
     for d in range(2,1000):    
     
-        rList=[]
-       
+        rList=[]       
     
         for b in range(1,d): #cycle can only be d-1 long
     
@@ -29,8 +28,7 @@ def longest_cycle():
             curr_max = (d,len(rList))
     
     print(curr_max)
-    
-    
+        
 if __name__ == '__main__':
     
     longest_cycle()

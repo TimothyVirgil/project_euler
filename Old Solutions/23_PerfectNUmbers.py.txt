@@ -1,0 +1,26 @@
+#Project Euler #23 Non-abundant sums
+
+#One strategy- find all abundant numbers - list them.
+#Create a new list where I add the first to the rest, second the rest,etc.
+#create another list for numbers not in list 2 up to 28123
+
+import math
+
+abund=[]
+
+for a in range(12,28000):
+
+	if sum>(a-1):
+
+		abund.append(a-1)
+
+		
+	
+
+	sum=0
+
+	for b in range(2,round(math.sqrt(a))+1):
+		
+		if b==sqrt(a):
+
+			sum=sum+b

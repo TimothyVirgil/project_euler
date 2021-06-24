@@ -1,4 +1,4 @@
-'''Solution to Project Euler Problem 30
+'''Solution to Project Euler Problem 31
 Code by Timothy Virgil Payne Jr.
 Started: 6/23/2021
 Completed: 6/24/2021

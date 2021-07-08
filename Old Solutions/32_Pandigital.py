@@ -13,6 +13,9 @@ for a in range(0,100):
 
             if clown.count('1')==1 and clown.count('2')==1 and clown.count('3')==1 and clown.count('4')==1 and clown.count('5')==1 and clown.count('6')==1 and clown.count('7')==1 and clown.count('8')==1 and clown.count('9')==1:
 
+
+                print(a,b,c)
+
                 if c not in sumprodList:
 
                     sumprodList=sumprodList + [c]

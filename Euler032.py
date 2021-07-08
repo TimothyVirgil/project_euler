@@ -1,7 +1,7 @@
 '''Solution to Project Euler Problem 32
 Code by Timothy Virgil Payne Jr.
 Started: 6/24/2021
-Completed:
+Completed: 7/8/2021
 
 Our multiplaction statement must have 9 digits.
 

@@ -1,4 +1,4 @@
-'''Solution to Project Euler Problem 34
+'''Solution to Project Euler Problem 35
 Code by Timothy Virgil Payne Jr.
 Started: 7/28/21
 Completed:7/28/21'''

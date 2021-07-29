@@ -37,11 +37,8 @@ def pal_checker_bin(b):
 pal_sum = 0
 
 for x in range(1,1_000_000,2): #only need odds since binaries must end in 1
-
-    if x % 10 == 0:
-        continue
-    
-    elif pal_checker_dec(x):
+       
+    if pal_checker_dec(x):
 
         if pal_checker_bin(bin(x)):
             pal_sum += x

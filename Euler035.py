@@ -27,8 +27,6 @@ def primecheck(a):
         else:            
             return True
 
-
-
 def dig_check(a):
 
     'Cycle the digits, check for primes'
@@ -38,42 +36,32 @@ def dig_check(a):
     str_prime = str(a)
 
     for c in range(len(str_prime)-1): #cycle for the rest of the primes
-
         check_str = ''
 
         for b in range((len(str_prime)-1),-1,-1):
             check_str += str_prime[-b]
 
         if primecheck(int(check_str)):
-
             str_prime = check_str
-
             continue
 
-        else:        
-
+        else:
             return
 
     else:
-
         prime_count += 1
 
 even_digs = ['2','4','6','8','0'] #skipping all evens saves like two seconds
 
 for x in range(101,1_000_000,2):
-
     even_check = str(x)
 
     for dig in even_check:
-
         if dig in even_digs:
-
             break
 
     else:
-
         if primecheck(x):
-
             dig_check(x)
 
 print(prime_count)

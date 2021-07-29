@@ -1,4 +1,4 @@
-# Solution to Project Euler Problem 1
+# Solution to Project Euler Problem 2
 # Code by Tim Payne
 # Completed: 03/14/2019
 

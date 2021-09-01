@@ -2,7 +2,10 @@
 
 q=''
 
-for a in range(1,1000000):
+for a in range(1,500000):
+    if len(q) > 1000000:
+        print(a)
+        break
 
     q=q+str(a)
 

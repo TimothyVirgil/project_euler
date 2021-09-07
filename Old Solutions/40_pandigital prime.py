@@ -12,7 +12,7 @@ for a in range(7000001,8000000,2):
     if int(jill[-1])==5:
         continue
 
-    if '0' in jill:
+    elif '0' in jill or '8' in jill:
         continue
     
     for c in range(1,8):
@@ -29,7 +29,7 @@ for a in range(7000001,8000000,2):
 
                     if a>currlarge:
                         currlarge=a
-                        print(currlarge)
+print(currlarge)
             
         
 

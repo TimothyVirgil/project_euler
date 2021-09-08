@@ -172,6 +172,8 @@ message=''
 for bob in tenlist:
     message=message+chr(bob)
 
+print(message)
+
 
 ##print(message)
 ##

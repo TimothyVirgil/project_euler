@@ -29,7 +29,7 @@ def primecheck(a):
 first_num = '123'
 max_pan_prime = 0
 
-for a in range(4,10):
+for a in range(4,8):
     first_num += str(a)
 
     for b in permutations(first_num):

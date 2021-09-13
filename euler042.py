@@ -3,35 +3,29 @@ Code by Timothy Virgil Payne Jr.
 Started: 9/8/21
 Completed: 9/8/21 '''
 
-from timer import timer
+words = open("p042_words.txt",'r')
 
-@timer
-def tri_word_counter():
+words_list = words.read().replace('"','').split(',')
 
-    words = open("p042_words.txt",'r')
+tri_word_tot = 0
 
-    words_list = words.read().replace('"','').split(',')
+for a in words_list:
+    curr_tri = 0
 
-    tri_word_tot = 0
+    for b in a:
+        curr_tri += ord(b) - 64
 
-    for a in words_list:
-        curr_tri = 0
+    else:
+        test_tri = 0
+        n = 1
 
-        for b in a:
-            curr_tri += ord(b) - 64
+        while test_tri < curr_tri:
+            test_tri = int(0.5*n*(n+1))
+            n += 1
 
-        else:
-            test_tri = 0
-            n = 1
+            if test_tri == curr_tri:
+                tri_word_tot += 1
 
-            while test_tri < curr_tri:
-                test_tri = int(0.5*n*(n+1))
-                n += 1
-
-                if test_tri == curr_tri:
-                    tri_word_tot += 1
-
-    print(tri_word_tot)
+print(tri_word_tot)
             
-if __name__ == '__main__':
-    tri_word_counter()
+

@@ -1,4 +1,4 @@
-'''Solution to Project Euler Problem 41
+'''Solution to Project Euler Problem 44
 Code by Timothy Virgil Payne Jr.
 Started: 12/9/21
 Completed: 12/30/21

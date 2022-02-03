@@ -67,7 +67,6 @@ def prime_factorization(num):
                     pf_dict[num] = 1
                     return pf_dict
 
-
 pf_count = 0
 num_list = []
 check_num = 4

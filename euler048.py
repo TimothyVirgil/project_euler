@@ -1,4 +1,4 @@
-'''Solution to Project Euler Problem 47
+'''Solution to Project Euler Problem 48
 Code by Timothy Virgil Payne Jr.
 Started: 2/6/22
 Completed: 2/6/22

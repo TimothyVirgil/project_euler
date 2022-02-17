@@ -27,7 +27,9 @@ while prime_sum_search:
             prime_sum = sum(prime_list[b: last_prime_ind])
             if prime_sum > 1_000_000:
                 break
-            if primecheck(prime_sum) and prime_sum < 1_000_000:
+            elif primecheck(prime_sum):
                 print(prime_sum)
                 prime_sum_search = False
                 break
+            else:
+                continue

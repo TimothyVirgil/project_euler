@@ -7,15 +7,17 @@ Completed: 2/10/22
 import itertools
 from primecheck import primecheck
 
+
 def iter_arim_prime_check(prime):
+
     '''Create lists of permutated primes'''
     iter_list = []
     prime_iters = itertools.permutations(str(prime))
     iter_list = [int(''.join(tups)) for tups in prime_iters if primecheck(int(''.join(tups)))]
     iter_list = list(set(iter_list))
-    iter_list.remove(prime) 
-    
-    for poss_num in iter_list:        
+    iter_list.remove(prime)
+
+    for poss_num in iter_list:
         poss_diff = abs(prime - poss_num)
         for poss_num2 in iter_list:
             if poss_num2 == poss_num:

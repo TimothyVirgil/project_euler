@@ -1,7 +1,7 @@
 '''Solution to Project Euler Problem 51
 Code by Timothy Virgil Payne Jr.
 Started: 3/29/22
-Completed:
+Completed: 5/5/22
 https://projecteuler.net/problem=51
 
 What will happen here is that we will have some smallest prime which will

@@ -6,23 +6,29 @@ https://projecteuler.net/problem=57'''
 
 # fractions have a very simple algorithm
 
-prev_numerator = 3
-prev_denominator = 2
-numerator = 7
-denominator = 5
-num_larger = 0
 
-for a in range(2, 1000):
+def solve():
+    prev_numerator = 3
+    prev_denominator = 2
+    numerator = 7
+    denominator = 5
+    num_larger = 0
 
-    (prev_numerator,
-     prev_denominator,
-     numerator,
-     denominator) = (numerator,
-                     denominator,
-                     numerator*2 + prev_numerator,
-                     denominator*2 + prev_denominator)
+    for a in range(2, 1000):
 
-    if len(str(numerator)) > len(str(denominator)):
-        num_larger += 1
+        (prev_numerator,
+         prev_denominator,
+         numerator,
+         denominator) = (numerator,
+                         denominator,
+                         numerator*2 + prev_numerator,
+                         denominator*2 + prev_denominator)
 
-print(num_larger)
+        if len(str(numerator)) > len(str(denominator)):
+            num_larger += 1
+
+    print(num_larger)
+
+
+if __name__ == "__main__":
+    solve()

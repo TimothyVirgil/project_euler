@@ -4,7 +4,12 @@ Started: 1/20/22
 Completed: 1/20/22
 '''
 
-from primecheck import primecheck
+import path
+import sys
+directory = path.Path(__file__).abspath()
+sys.path.append(directory.parent.parent)
+from utils import primecheck
+
 
 def squarecheck(num):
     if ((num/2)**0.5).is_integer():
@@ -12,29 +17,37 @@ def squarecheck(num):
     else:
         return False
 
-def comp_prime_builder(test_num):    
 
-    while primecheck(test_num):        
+def comp_prime_builder(test_num):
+
+    while primecheck(test_num):
         primes.append(test_num)
-        test_num += 2       
+        test_num += 2
 
     else:
         for prime in primes:
             check_num = test_num - prime
             if squarecheck(check_num):
-                return False, test_num                
+                return False, test_num
             else:
-                continue                                     
+                continue
         else:
             return True, test_num
 
-primes=[2,3,5,7]
-curr_num = 9
 
-curr_res = comp_prime_builder(curr_num)
-while curr_res[0] == False:
-    curr_num = curr_res[1] + 2
+def solve():
+    global primes
+    primes = [2, 3, 5, 7]
+    curr_num = 9
+
     curr_res = comp_prime_builder(curr_num)
+    while curr_res[0] is False:
+        curr_num = curr_res[1] + 2
+        curr_res = comp_prime_builder(curr_num)
 
-else:
-    print(curr_res[1])
+    else:
+        print(curr_res[1])
+
+
+if __name__ == "__main__":
+    solve()

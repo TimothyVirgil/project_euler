@@ -1,7 +1,7 @@
 '''This module holds the primecheck function
 which is commonly used in these Euler solutions.'''
 
-def primecheck(a):
+def primecheck(a:num) -> bool:
     
     'This function checks to see if an integer is prime.' 
 

@@ -1,6 +1,6 @@
 from primecheck import primecheck
 
-def prime_factorization(num):
+def prime_factorization(num: int) -> dict:
 
     '''Return a dictionary with the prime factors as keys
     and their exponents as values.'''

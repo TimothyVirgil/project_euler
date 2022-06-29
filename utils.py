@@ -93,7 +93,8 @@ def timer(func: Callable) -> Callable:
 
     def inner_func(*args, **kwargs):
         start = time.time()
-        func()
+        run = func()
         print('total time: {} seconds'.format((time.time()-start)))
+        return run
 
     return inner_func

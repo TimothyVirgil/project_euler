@@ -1,7 +1,7 @@
 '''Solution to Project Euler Problem 59
 Code by Timothy Virgil Payne Jr.
 Started: 6/29/22
-Completed:
+Completed: 6/29/22
 https://projecteuler.net/problem=59
 Using English words list from: https://github.com/dwyl/english-words
 

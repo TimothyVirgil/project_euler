@@ -53,7 +53,7 @@ def solve():
                     else:
                         if len(item + (a,)) == 4:
                             five_concats = ((num,) + (item + (a,)))
-                            return(five_concats, sum(five_concats))
+                            return (five_concats, sum(five_concats))
                         item_tups.append(item + (a,))
                 ans_dict[num].extend(item_tups)
         a += 2

@@ -52,11 +52,13 @@ def solve():
                             break
                     else:
                         if len(item + (a,)) == 4:
-                            return((num,) + (item + (a,)))
+                            five_concats = ((num,) + (item + (a,)))
+                            return(five_concats, sum(five_concats))
                         item_tups.append(item + (a,))
                 ans_dict[num].extend(item_tups)
         a += 2
 
 
 if __name__ == '__main__':
-    print(solve())
+    ans = solve()
+    print(f'The sum is {ans[1]}.')

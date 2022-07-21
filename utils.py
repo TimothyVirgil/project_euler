@@ -1,6 +1,8 @@
 '''General use functions for Euler problems'''
 
 from typing import Callable
+import math
+import time
 
 '''script to import utils:
 import path
@@ -89,8 +91,6 @@ def prime_factorization(num: int) -> dict:
 def timer(func: Callable) -> Callable:
     '''Decorator to time functions'''
 
-    import time
-
     def inner_func(*args, **kwargs):
         start = time.time()
         run = func()
@@ -98,3 +98,30 @@ def timer(func: Callable) -> Callable:
         return run
 
     return inner_func
+
+
+def continued_fractions(x: int) -> list[int, int, list[int]]:
+    '''Returns a list where:
+    first element: radicand
+    second element: root integer
+    third element: list of continued fractions
+    Check https://projecteuler.net/problem=64 for more info.'''
+
+    cont_frac = ''
+    if math.sqrt(x).is_integer():
+        cont_frac = [x, 0, []]
+        return cont_frac
+    else:
+        a = int(math.sqrt(x))
+        b = int((math.sqrt(x)+a)/(x-a**2))
+        cont_frac = [x, a, [b]]
+        if x - a**2 == 1 and a - b * x + b * a**2 == -a:
+            return cont_frac
+        u = a - b * x + b * a**2
+        v = x - a**2
+        while v != 1 or u != -a:
+            c = int(((math.sqrt(x)-u)/((x-u**2)/v)))
+            v = int((x-u**2)/v)
+            u = -u - c * v
+            cont_frac[2].append(c)
+        return cont_frac

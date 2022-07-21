@@ -3,6 +3,7 @@
 from typing import Callable
 import math
 import time
+from fractions import Fraction
 
 '''script to import utils:
 import path
@@ -125,3 +126,14 @@ def continued_fractions(x: int) -> list[int, int, list[int]]:
             u = -u - c * v
             cont_frac[2].append(c)
         return cont_frac
+
+
+def find_convergents(rad: int, n:int) -> Fraction:
+    '''For a square root, return the nth convergent fraction'''
+
+    con = continued_fractions(rad)
+    curr = 0
+    con_len = len(con[2])
+    for a in range(n-2, -1, -1):        
+        curr = Fraction(1, con[2][a % con_len] + curr)      
+    return con[1] + curr

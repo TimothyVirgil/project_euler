@@ -12,6 +12,7 @@ sys.path.append(directory.parent.parent)
 from utils import timer
 from itertools import permutations
 
+
 @timer
 def solve():
 

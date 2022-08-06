@@ -34,7 +34,7 @@ def prime_factorization(num: int) -> dict:
     '''Return a dictionary with the prime factors as keys
     and their exponents as values.'''
 
-    pf_dict = {'number': num}
+    pf_dict = {'number': num, 'factors' : dict()}
 
     # if prime... done
     if primecheck(num):
@@ -44,17 +44,17 @@ def prime_factorization(num: int) -> dict:
         # case: even num
         if num % 2 == 0:
             num = num // 2
-            pf_dict[2] = 1
+            pf_dict['factors'][2] = 1
 
             while num % 2 == 0:
-                pf_dict[2] += 1
+                pf_dict['factors'][2] += 1
                 num = num // 2
 
     # case: odd composite num
         else:
             for a in range(3, int(num**(0.5)) + 2, 2):
                 if num % a == 0:
-                    pf_dict[a] = 1
+                    pf_dict['factors'][a] = 1
                     num = num // a
                     break
 
@@ -65,27 +65,27 @@ def prime_factorization(num: int) -> dict:
         while not (primecheck(num) or num == 1):
             for a in range(3, int(num**0.5)+2, 2):
                 if num % a == 0:
-                    if a in pf_dict:
+                    if a in pf_dict['factors']:
                         # if factor exists iterate its exponent
-                        pf_dict[a] += 1
+                        pf_dict['factors'][a] += 1
                         num = num // a
 
                     else:
                         # initial factor
-                        pf_dict[a] = 1
+                        pf_dict['factors'][a] = 1
                         num = num // a
 
         else:
             if num == 1:
                 return pf_dict
             else:
-                if num in pf_dict:
+                if num in pf_dict['factors']:
                     # if factor exists
-                    pf_dict[num] += 1
+                    pf_dict['factors'][num] += 1
                     return pf_dict
 
                 else:
-                    pf_dict[num] = 1
+                    pf_dict['factors'][num] = 1
                     return pf_dict
 
 

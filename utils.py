@@ -95,11 +95,10 @@ def timer(func: Callable) -> Callable:
     def inner_func(*args, **kwargs):
         start = time.time()
         run = func()
-        print(f'total time: {(time.time()-start):3f} seconds')
+        print(f'total time: {(time.time()-start):.6f} seconds')
         return run
 
     return inner_func
-
 
 def continued_fractions(x: int) -> list[int, int, list[int]]:
     '''Returns a list where:

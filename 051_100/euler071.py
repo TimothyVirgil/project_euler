@@ -1,7 +1,7 @@
 '''Solution to Project Euler Problem 71
 Code by Timothy Virgil Payne Jr.
 Started: 8/6/22
-Completed:
+Completed: 8/6/22
 https://projecteuler.net/problem=71
 '''
 

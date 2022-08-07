@@ -4,7 +4,6 @@ from typing import Callable
 import math
 import time
 from fractions import Fraction
-
 '''script to import utils:
 import path
 import sys
@@ -69,11 +68,13 @@ def prime_factorization(num: int) -> dict:
                         # if factor exists iterate its exponent
                         pf_dict['factors'][a] += 1
                         num = num // a
+                        break
 
                     else:
                         # initial factor
                         pf_dict['factors'][a] = 1
                         num = num // a
+                        break
 
         else:
             if num == 1:
@@ -136,3 +137,15 @@ def find_convergents(rad: int, n:int) -> Fraction:
     for a in range(n-2, -1, -1):        
         curr = Fraction(1, con[2][a % con_len] + curr)      
     return con[1] + curr
+
+
+def totient(n):
+    '''Euler's totient formula'''
+    primes = prime_factorization(n)['factors'].keys()
+    if len(primes) == 0:
+        return n-1
+    else:
+        mult = n
+        for a in primes:
+            mult = mult*(a-1)//a
+        return mult

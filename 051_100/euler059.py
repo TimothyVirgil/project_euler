@@ -50,7 +50,7 @@ def solve():
     for key in poss_keys:
 
         decode_text = ''
-        key = (101, 120, 112)
+        # key = (101, 120, 112)
         code_sum = 0
         for a in range(0, len(words_list), 3):
             ord1 = words_list[a] ^ key[0]
